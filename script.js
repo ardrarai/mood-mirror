@@ -29,3 +29,9 @@ function getMoodReply() {
 
   document.getElementById('responseArea').innerText = foundReply;
 }
+
+document.getElementById('moodInput').addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    getMoodReply();
+  }
+});
