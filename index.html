@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mood Mirror</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #fef6f9;
+      color: #333;
+      text-align: center;
+    }
+    input {
+      padding: 0.5rem;
+      width: 60%;
+      margin: 1rem 0;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      background: hotpink;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎭 Mood Mirror</h1>
+  <input id="moodInput" placeholder="How do you feel?" />
+  <button onclick="getMoodReply()">Send</button>
+  <p id="responseArea"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
