@@ -1,5 +1,5 @@
 function getMoodReply() {
-  const input = document.getElementById('moodInput').value.toLowerCase();
+  const input = document.getElementById('moodInput').value.toLowerCase().trim();
   const response = {
     sad: "SAME BRO 😭 let's cry and order biryani.",
     happy: "YESS 🕺 go dance, you legend.",
@@ -10,6 +10,12 @@ function getMoodReply() {
     excited: "ENERGY!!! Let's goooo 🚀💃"
   };
   
-  document.getElementById('responseArea').innerText = 
+  document.getElementById('responseArea').innerText =
     response[input] || "idk man, but you’ll survive 💪";
 }
+
+document.getElementById('moodInput').addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    getMoodReply();
+  }
+});
